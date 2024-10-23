@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Weather Application</title>
 </head>
 <body>
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
-    <div class = "container">
+    <div class="container">
         <div class="search">
             <i class="fa-solid fa-map"></i>
             <input type="text" placeholder="Enter your location">
             <button class="fa-solid fa-magnifying-glass-location"></button>
         </div>
 
-        <div id="weather">
-            <img src="" alt="">
-            <i class="fa-solid fa-temperature-low"></i>
-            <p class="temperature"></p>
-            <p class="cloudiness"></p>
+        <div class="not-found">
+            <img src="images/404.png" alt="Not found">
+            <p>Invalid location!</p>
         </div>
+
+        <div class="weather">
+            <img src="" alt="">
+            <div class="temperature">
+                <i class="fa-solid fa-temperature-low"></i>
+                <p id="celsius"></p>
+            </div>
+            <p id="cloudiness"></p>
+        </div>
+        
 
         <div class="weather-informations">
             <div id="wind">
@@ -34,7 +43,10 @@
 
             <div id="humidity">
                 <i class="fa-solid fa-cloud-showers-heavy"></i>
-                <p>Humidity</p>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
             </div>
         </div>
     </div>
@@ -57,6 +69,5 @@
     </script>
 
     <script src="query.js"></script>
-    
 </body>
 </html>
