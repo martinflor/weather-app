@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Application</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <div class = "container">
+        <div class="search">
+            <i class="fa-solid fa-map"></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="fa-solid fa-magnifying-glass-location"></button>
+        </div>
+
+        <div id="weather">
+            <img src="" alt="">
+            <i class="fa-solid fa-temperature-low"></i>
+            <p class="temperature"></p>
+            <p class="cloudiness"></p>
+        </div>
+
+        <div class="weather-informations">
+            <div id="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+
+            <div id="humidity">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                <p>Humidity</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateBackgroundColor() {
+            const hour = new Date().getHours();
+            const body = document.body;
+            
+            if (hour >= 6 && hour < 18) {
+                // Daytime: Light blue background
+                body.style.backgroundColor = '#dff6ff';
+            } else {
+                // Nighttime: Dark blue background
+                body.style.backgroundColor = '#06283D';
+            }
+        }
+        updateBackgroundColor();
+        setInterval(updateBackgroundColor, 60 * 60 * 1000);
+    </script>
+
+    <script src="query.js"></script>
+    
+</body>
+</html>

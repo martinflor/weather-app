@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 555px;
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 18px;
+    transition: 3.6s ease-out;
+}
+
+
+.search{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    color: #06283D;
+    width: 85%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 42px;
+}
+
+.search input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.search button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search button:hover{
+    color: #fff;
+    background: #06283D;
+}
+
+.search i{
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+.weather{
+    text-align: center;
+}
+
+.weather img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.weather .temperature{
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+.weather i{
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+
+.weather .cloudiness{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-informations{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 350px;
+}
+
+.weather-informations i{
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-informations span{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-informations p{
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
